@@ -25,3 +25,10 @@ Features to think of:
 - Redux and Store setup
 - Account Notifications
 - API calls alert
+
+Common Components Planning
+- Top Navigation Bar
+- Container to hold whatever route specific component is There
+- NotificationTray 
+- Transaction list 
+- Vasooli list
