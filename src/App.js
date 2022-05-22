@@ -1,5 +1,9 @@
 function App() {
-  return <div className="App">Vasooli</div>;
+  return (
+    <h1 className="text-3xl font-bold underline">
+      Hello From Vasooli Money Manager!!
+    </h1>
+  );
 }
 
 export default App;
