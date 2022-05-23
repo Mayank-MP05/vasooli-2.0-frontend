@@ -13,8 +13,9 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Modal />
-      <Routes />
+      <div className="md:w-10/12 mx-auto md:my-10 sm:my-3 p-4 bg-white rounded-lg border shadow-md sm:p-3 dark:bg-gray-800 dark:border-gray-700">
+        <Routes />
+      </div>
     </Router>
   );
 }
