@@ -18,16 +18,20 @@ import Vasoolis from "./pages/vasoolis";
 
 function RoutesWrapper() {
   return (
-    <Router>
+    <>
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/transactions" element={<Transactions />} />
         <Route path="/vasoolis" element={<Vasoolis />} />
-        <Route exact path="/" element={<Navigate to="/dashboard" replace />} />
-        <Route path="/*" element={<NotFound404 />} />
+        <Route
+          exact
+          path="/"
+          element={<Navigate to="/dashboard" replace />}
+        />{" "}
+        <Route path="*" element={<NotFound404 />} />
       </Routes>
-    </Router>
+    </>
   );
 }
 
