@@ -1,8 +1,27 @@
+import { useSelector, useDispatch } from "react-redux";
+import { decrement, increment } from "./redux/reducer/counter";
+
 function App() {
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello From Vasooli Money Manager!!
-    </h1>
+    <div>
+      <div>
+        <button
+          aria-label="Increment value"
+          onClick={() => dispatch(increment())}
+        >
+          Increment
+        </button>
+        <span>{count}</span>
+        <button
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+        >
+          Decrement
+        </button>
+      </div>
+    </div>
   );
 }
 
