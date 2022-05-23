@@ -1,8 +1,7 @@
 import React from "react";
 import { LockClosedIcon } from "@heroicons/react/solid";
-import { SigninMoneyIcon } from "../assets";
-
-const LoginUI = () => {
+import { SignupMoneyIcon } from "../assets";
+const SignupUI = () => {
   return (
     <>
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -10,11 +9,11 @@ const LoginUI = () => {
           <div>
             <img
               className="mx-auto h-24 w-auto"
-              src={SigninMoneyIcon}
+              src={SignupMoneyIcon}
               alt="Workflow"
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-              Sign in to your account
+              Create a new Vasooli account
             </h2>
           </div>
           <div className="mt-8 space-y-6">
@@ -48,31 +47,47 @@ const LoginUI = () => {
                   placeholder="Password"
                 />
               </div>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <input
-                  id="remember-me"
-                  name="remember-me"
-                  type="checkbox"
-                  className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-                />
-                <label
-                  htmlFor="remember-me"
-                  className="ml-2 block text-sm text-gray-900"
-                >
-                  Remember me
+              <div>
+                <label htmlFor="confirmPassword" className="sr-only">
+                  Confirm Password
                 </label>
+                <input
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  type="password"
+                  autoComplete="current-confirmPassword"
+                  required
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  placeholder="confirmPassword"
+                />
               </div>
-
-              <div className="text-sm">
-                <a
-                  href="#"
-                  className="font-medium text-indigo-600 hover:text-indigo-500"
-                >
-                  Forgot your password?
-                </a>
+              <div>
+                <label htmlFor="userFullName" className="sr-only">
+                  Full Name
+                </label>
+                <input
+                  id="userFullName"
+                  name="userFullName"
+                  type="text"
+                  autoComplete="Full Name"
+                  required
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  placeholder="John Doe"
+                />
+              </div>
+              <div>
+                <label htmlFor="userFullName" className="sr-only">
+                  City
+                </label>
+                <input
+                  id="userCity"
+                  name="userCity"
+                  type="text"
+                  autoComplete="City"
+                  required
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  placeholder="Banglore"
+                />
               </div>
             </div>
 
@@ -84,12 +99,12 @@ const LoginUI = () => {
                     aria-hidden="true"
                   />
                 </span>
-                Sign in
+                Create an account
               </button>
               <div className="text-center mx-auto my-3">
-                <span>Don't have an account </span>
+                <span>Already have an account,{" "}</span>
                 <span className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">
-                  Create one here
+                  Sign In here
                 </span>
               </div>
             </div>
@@ -100,4 +115,4 @@ const LoginUI = () => {
   );
 };
 
-export default LoginUI;
+export default SignupUI;
