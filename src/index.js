@@ -6,6 +6,7 @@ import App from "./App";
 // Redux Setup
 import { store } from "./redux/store";
 import { Provider } from "react-redux";
+import 'flowbite';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
