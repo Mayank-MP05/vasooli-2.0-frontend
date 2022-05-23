@@ -1,6 +1,7 @@
 {
-  "name": "client",
-  "version": "0.1.0",
+  "name": "Vasooli - The Money Manager",
+  "version": "1.2.0",
+  "description": "Vasooli - The Money Manager App used to track expenses and transfers",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.6.2",
