@@ -5,11 +5,16 @@
 
 a. login/signup modal
 
+
 b. transaction add/edit modal
+
 c. transaction delete confirm modal
 
+
 e. vasooli add/edit modal
+
 f. vasooli delete confirm modal
+
 
 g. profile update confirm modal
 
