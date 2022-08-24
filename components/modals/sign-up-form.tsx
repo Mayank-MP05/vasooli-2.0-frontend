@@ -1,7 +1,11 @@
 import React from "react";
 import { LockClosedIcon } from "@heroicons/react/solid";
 
-const SignUpForm = () => {
+const SignUpForm = ({ setModalType }) => {
+  const renderSignInForm = () => {
+    if (setModalType) setModalType("SIGN_IN");
+  };
+
   return (
     <>
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -43,7 +47,7 @@ const SignUpForm = () => {
                   type="password"
                   autoComplete="current-password"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                   placeholder="Password"
                 />
               </div>
@@ -61,34 +65,6 @@ const SignUpForm = () => {
                   placeholder="confirmPassword"
                 />
               </div>
-              <div>
-                <label htmlFor="userFullName" className="sr-only">
-                  Full Name
-                </label>
-                <input
-                  id="userFullName"
-                  name="userFullName"
-                  type="text"
-                  autoComplete="Full Name"
-                  required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="John Doe"
-                />
-              </div>
-              <div>
-                <label htmlFor="userFullName" className="sr-only">
-                  City
-                </label>
-                <input
-                  id="userCity"
-                  name="userCity"
-                  type="text"
-                  autoComplete="City"
-                  required
-                  className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                  placeholder="Banglore"
-                />
-              </div>
             </div>
 
             <div>
@@ -102,8 +78,11 @@ const SignUpForm = () => {
                 Create an account
               </button>
               <div className="text-center mx-auto my-3">
-                <span>Already have an account,{" "}</span>
-                <span className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">
+                <span>Already have an account, </span>
+                <span
+                  onClick={renderSignInForm}
+                  className="underline cursor-pointer text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                >
                   Sign In here
                 </span>
               </div>

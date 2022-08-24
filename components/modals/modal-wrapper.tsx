@@ -4,6 +4,8 @@ import SignUpForm from "./sign-up-form";
 
 const Modal = ({ isOpen = false }: { isOpen: Boolean }) => {
   const [showModal, setShowModal] = React.useState(false);
+  const [modalType, setModalType] = React.useState("SIGN_IN");
+
   return (
     <>
       <button
@@ -16,9 +18,19 @@ const Modal = ({ isOpen = false }: { isOpen: Boolean }) => {
       {showModal ? (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none sm:m-4">
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+            <div className="relative w-auto my-6 mx-auto max-w-sm">
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                <SignUpForm />
+                {modalType === "SIGN_IN" ? (
+                  <SignInForm setModalType={setModalType} />
+                ) : (
+                  ""
+                )}
+                {modalType === "SIGN_UP" ? (
+                  <SignUpForm setModalType={setModalType} />
+                ) : (
+                  ""
+                )}
+                {modalType === "SIGN_OUT" ? <h1>Logout ...</h1> : ""}
               </div>
             </div>
           </div>

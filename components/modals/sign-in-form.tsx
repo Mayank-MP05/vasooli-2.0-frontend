@@ -1,7 +1,11 @@
 import React from "react";
 import { LockClosedIcon } from "@heroicons/react/solid";
 
-const SignInForm = () => {
+const SignInForm = ({ setModalType }) => {
+  const renderSignUpForm = () => {
+    if (setModalType) setModalType("SIGN_UP");
+  };
+
   return (
     <>
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -49,32 +53,6 @@ const SignInForm = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <input
-                  id="remember-me"
-                  name="remember-me"
-                  type="checkbox"
-                  className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-                />
-                <label
-                  htmlFor="remember-me"
-                  className="ml-2 block text-sm text-gray-900"
-                >
-                  Remember me
-                </label>
-              </div>
-
-              <div className="text-sm">
-                <a
-                  href="#"
-                  className="font-medium text-indigo-600 hover:text-indigo-500"
-                >
-                  Forgot your password?
-                </a>
-              </div>
-            </div>
-
             <div>
               <button className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                 <span className="absolute left-0 inset-y-0 flex items-center pl-3">
@@ -87,7 +65,10 @@ const SignInForm = () => {
               </button>
               <div className="text-center mx-auto my-3">
                 <span>Don't have an account </span>
-                <span className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">
+                <span
+                  onClick={renderSignUpForm}
+                  className="cursor-pointer underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+                >
                   Create one here
                 </span>
               </div>

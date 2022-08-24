@@ -1,5 +1,5 @@
 import React from "react";
-import ConfirmDeleteModal from "../../components/common/confirm-delete";
+import ConfirmDeleteModal from "../../components/common/confirm-delete-modal";
 import SignInForm from "../../components/modals/sign-in-form";
 import ModalWrapper from "../../components/modals/modal-wrapper";
 
