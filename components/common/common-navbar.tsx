@@ -8,16 +8,16 @@ function Navbar() {
     <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <Link href="/" className="flex items-center">
-          <>
+          <div className="mr-auto flex flex-row justify-center items-center cursor-pointer">
             <img
               src={`/static/icon.png`}
               className="mr-3 h-6 sm:h-9"
               alt="Vasooli Logo"
             />
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="m-auto self-start text-xl font-semibold whitespace-nowrap dark:text-white">
               Vasooli Money
             </span>
-          </>
+          </div>
         </Link>
         <div className="flex items-center md:order-2">
           <DropdownRender
@@ -152,7 +152,7 @@ function Navbar() {
           className="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
           id="mobile-menu-2"
         >
-          <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+          <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium mr-4">
             <li>
               <Link
                 href="/dashboard"

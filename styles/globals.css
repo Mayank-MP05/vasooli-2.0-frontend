@@ -21,6 +21,7 @@ a {
   box-sizing: border-box;
   /* font-family: "Lora", serif; */
   font-family: "Poppins", sans-serif;
+  user-select: none;
 }
 
 @media (prefers-color-scheme: dark) {
