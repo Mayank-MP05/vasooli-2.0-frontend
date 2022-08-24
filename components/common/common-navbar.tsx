@@ -1,7 +1,7 @@
 import { Menu, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
 import Link from "next/link";
-import DropdownRender from "./dropdown";
+import DropdownRender from "./dropdown-renderer";
 
 function Navbar() {
   return (

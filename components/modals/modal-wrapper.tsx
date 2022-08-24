@@ -1,7 +1,8 @@
 import React from "react";
-import LoginUI from "./sign-in-form";
-import SignupUI from "./signup";
-function Modal() {
+import SignInForm from "./sign-in-form";
+import SignUpForm from "./sign-up-form";
+
+const Modal = ({ isOpen = false }: { isOpen: Boolean }) => {
   const [showModal, setShowModal] = React.useState(false);
   return (
     <>
@@ -16,9 +17,8 @@ function Modal() {
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none sm:m-4">
             <div className="relative w-auto my-6 mx-auto max-w-3xl">
-              {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                <SignupUI />
+                <SignUpForm />
               </div>
             </div>
           </div>
@@ -27,6 +27,6 @@ function Modal() {
       ) : null}
     </>
   );
-}
+};
 
 export default Modal;

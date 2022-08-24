@@ -2,8 +2,12 @@ import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ExclamationIcon } from "@heroicons/react/outline";
 
-export default function Example() {
-  const [open, setOpen] = useState(true);
+export default function ConfirmDeleteModal({
+  isOpen = true,
+}: {
+  isOpen: boolean;
+}) {
+  const [open, setOpen] = useState(isOpen);
 
   const cancelButtonRef = useRef(null);
 
