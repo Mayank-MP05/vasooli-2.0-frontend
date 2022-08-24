@@ -1,6 +1,5 @@
 import React from "react";
 import { LockClosedIcon } from "@heroicons/react/solid";
-import { SigninMoneyIcon } from "../assets";
 
 const LoginUI = () => {
   return (
@@ -10,8 +9,8 @@ const LoginUI = () => {
           <div>
             <img
               className="mx-auto h-24 w-auto"
-              src={SigninMoneyIcon}
-              alt="Workflow"
+              src={`/static/signin-money-icon.svg`}
+              alt="Login to Vasooli Money"
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               Sign in to your account

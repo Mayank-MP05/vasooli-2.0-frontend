@@ -1,9 +1,10 @@
 import React from "react";
-import { ProfileIcon } from "../../assets";
 import IconWrapper from "../../components/common/icon-wrapper";
 
 const Profile = () => {
-  return <IconWrapper icon={ProfileIcon} headerTitle="Profile" />;
+  return (
+    <IconWrapper icon={`/static/profile-icon.svg`} headerTitle="Profile" />
+  );
 };
 
 export default Profile;

@@ -1,6 +1,6 @@
 import React from "react";
 import { LockClosedIcon } from "@heroicons/react/solid";
-import { SignupMoneyIcon } from "../assets";
+
 const SignupUI = () => {
   return (
     <>
@@ -9,7 +9,7 @@ const SignupUI = () => {
           <div>
             <img
               className="mx-auto h-24 w-auto"
-              src={SignupMoneyIcon}
+              src={`/static/signup-money-icon.svg`}
               alt="Workflow"
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">

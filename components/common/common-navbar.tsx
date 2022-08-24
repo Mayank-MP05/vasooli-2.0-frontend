@@ -1,8 +1,6 @@
 import { Menu, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
 import Link from "next/link";
-import { NavbarLogo } from "../assets";
-import { user1 } from "../utils/constants";
 import DropdownRender from "./dropdown";
 
 function Navbar() {
@@ -10,14 +8,16 @@ function Navbar() {
     <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <Link href="/" className="flex items-center">
-          <img
-            src={NavbarLogo}
-            className="mr-3 h-6 sm:h-9"
-            alt="Vasooli Logo"
-          />
-          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-            Vasooli Money
-          </span>
+          <>
+            <img
+              src={`/static/icon.png`}
+              className="mr-3 h-6 sm:h-9"
+              alt="Vasooli Logo"
+            />
+            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+              Vasooli Money
+            </span>
+          </>
         </Link>
         <div className="flex items-center md:order-2">
           <DropdownRender
@@ -32,7 +32,7 @@ function Navbar() {
                 <span className="sr-only">Open user menu</span>
                 <img
                   className="w-8 h-8 rounded-full"
-                  src={user1}
+                  src={`/static/user-avatars/user-1.png`}
                   alt="user profile"
                 />
               </button>

@@ -1,7 +1,7 @@
 import React from "react";
 
 type inputProps = {
-  icon?: any;
+  icon?: string;
   size?: number;
   headerTitle?: string;
 };
