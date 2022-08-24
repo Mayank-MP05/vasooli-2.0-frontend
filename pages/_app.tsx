@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-script-component-in-head */
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -90,6 +92,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
         <title>Vasooli - The Money Manager</title>
+        <Script src="https://cdn.tailwindcss.com" async />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
