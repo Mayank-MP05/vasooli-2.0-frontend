@@ -6,6 +6,7 @@ const Vasoolis = () => {
     <IconWrapper
       icon={`/static/vasooli-money-bag-icon.svg`}
       headerTitle="Vasoolis"
+      showCreateNewBtn
     />
   );
 };

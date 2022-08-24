@@ -6,6 +6,7 @@ const Transactions = () => {
     <IconWrapper
       icon={`/static/transactions-icon.svg`}
       headerTitle="Transaction"
+      showCreateNewBtn
     />
   );
 };
