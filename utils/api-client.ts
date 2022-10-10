@@ -1,13 +1,13 @@
 import axios from "axios";
-import type { AxiosResponse } from "axios";
+import type { AxiosResponse, AxiosError } from "axios";
 const API_ENDPOINT = "http://localhost:8000";
 const APIClient = ({
   route = "/",
   headers = {},
   payload = {},
   method = "POST",
-  successFn = () => {},
-  errorFn = () => {},
+  successFn = (res: AxiosResponse) => {},
+  errorFn = (err: AxiosError) => {},
   finallyFn = () => {},
 }) => {
   axios({
@@ -20,7 +20,7 @@ const APIClient = ({
       ...headers,
     },
   })
-    .then(function (response: AxiosResponse) {
+    .then((response: AxiosResponse) => {
       console.log(
         `%c ${method} `,
         "background: green;color:white",
@@ -29,7 +29,7 @@ const APIClient = ({
       );
       successFn(response.data);
     })
-    .catch((err) => {
+    .catch((err: AxiosError) => {
       console.log(
         `%c ${method} `,
         "background: red;color:white",
